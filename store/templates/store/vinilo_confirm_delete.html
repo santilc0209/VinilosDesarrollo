@@ -1,0 +1,14 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<h1>Confirmar eliminación</h1>
+
+<p>¿Estás seguro de eliminar <strong>{{ vinilo.titulo }}</strong>?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button class="btn-danger" type="submit">Eliminar definitivamente</button>
+    <a class="btn-secondary" href="{% url 'vinilo-list' %}">Cancelar</a>
+</form>
+
+{% endblock %}

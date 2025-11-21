@@ -1,0 +1,85 @@
+[
+  {
+    "model": "store.proveedor",
+    "pk": 1,
+    "fields": {
+      "nombre": "Sony Music Colombia",
+      "correo": "contacto@sonymusic.com",
+      "telefono": "3001234567"
+    }
+  },
+  {
+    "model": "store.proveedor",
+    "pk": 2,
+    "fields": {
+      "nombre": "Universal Music Group",
+      "correo": "ventas@umg.com",
+      "telefono": "3109876543"
+    }
+  },
+  {
+    "model": "store.proveedor",
+    "pk": 3,
+    "fields": {
+      "nombre": "Warner Music Latin",
+      "correo": "latam@warnermusic.com",
+      "telefono": "3154448899"
+    }
+  },
+
+  {
+    "model": "store.cancion",
+    "pk": 1,
+    "fields": {
+      "titulo": "Billie Jean",
+      "artista": "Michael Jackson",
+      "año": 1982,
+      "duracion_seg": 293,
+      "precio": "4500.00"
+    }
+  },
+  {
+    "model": "store.cancion",
+    "pk": 2,
+    "fields": {
+      "titulo": "Come Together",
+      "artista": "The Beatles",
+      "año": 1969,
+      "duracion_seg": 259,
+      "precio": "4500.00"
+    }
+  },
+  {
+    "model": "store.cancion",
+    "pk": 3,
+    "fields": {
+      "titulo": "Hotel California",
+      "artista": "Eagles",
+      "año": 1976,
+      "duracion_seg": 390,
+      "precio": "5000.00"
+    }
+  },
+  {
+    "model": "store.cancion",
+    "pk": 4,
+    "fields": {
+      "titulo": "Blinding Lights",
+      "artista": "The Weeknd",
+      "año": 2020,
+      "duracion_seg": 200,
+      "precio": "5200.00"
+    }
+  },
+  {
+    "model": "store.cancion",
+    "pk": 5,
+    "fields": {
+      "titulo": "Smells Like Teen Spirit",
+      "artista": "Nirvana",
+      "año": 1991,
+      "duracion_seg": 301,
+      "precio": "4800.00"
+    }
+  }
+]

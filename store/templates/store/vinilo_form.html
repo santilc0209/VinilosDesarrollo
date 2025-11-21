@@ -1,0 +1,88 @@
+{% extends 'store/base.html' %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+
+<style>
+    .form-container {
+        width: 480px;
+        margin: 30px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-container h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #781e95;
+        font-size: 26px;
+    }
+
+    .form-container label {
+        font-weight: bold;
+        color: #4a4a4a;
+    }
+
+    .form-container input, 
+    .form-container select, 
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-save {
+        background: #781e95;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: none;
+        font-weight: bold;
+    }
+
+    .btn-save:hover {
+        background: #5c1375;
+    }
+
+    .btn-cancel {
+        background: #555;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .btn-cancel:hover {
+        background: #333;
+    }
+</style>
+
+<div class="form-container">
+    <h1>{{ titulo }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="form-actions">
+            <button type="submit" class="btn-save">💾 Guardar</button>
+            <a href="{% url 'vinilo-list' %}" class="btn-cancel">↩ Volver</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

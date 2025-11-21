@@ -1,0 +1,26 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<h1>{{ vinilo.titulo }}</h1>
+
+<p><strong>Artista:</strong> {{ vinilo.artista }}</p>
+<p><strong>Año:</strong> {{ vinilo.año }}</p>
+<p><strong>Precio:</strong> ${{ vinilo.precio }}</p>
+<p><strong>Stock:</strong> {{ vinilo.stock }}</p>
+
+<h3>Canciones:</h3>
+<ul>
+    {% for c in vinilo.canciones.all %}
+        <li>{{ c.titulo }} - {{ c.artista }}</li>
+    {% empty %}
+        <li>No hay canciones asignadas</li>
+    {% endfor %}
+</ul>
+
+<br>
+
+<a class="btn-secondary" href="{% url 'vinilo-update' vinilo.id %}">✏ Editar</a>
+<a class="btn-danger" href="{% url 'vinilo-delete' vinilo.id %}">🗑 Eliminar</a>
+<a class="btn" href="{% url 'vinilo-list' %}">⬅ Volver</a>
+
+{% endblock %}
